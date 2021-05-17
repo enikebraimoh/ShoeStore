@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="welcome_text">Hello and welcome</string>
+    <string name="welcome_desc">always feel at home and blablblblblblblblalbalblablablablalbablablablablblablablalalbabl</string>
+    <string name="bla">blablablablablalbalbalblalbalblablalblablablalblabla</string>
+    <string name="cancel_button">cancle</string>
+    <string name="save_button">save</string>
+    <string name="description_hint">Description</string>
+    <string name="shoe_size_hint">shoesize</string>
+    <string name="company_text_hint">Company</string>
+    <string name="shoe_name_hint">Shoe name</string>
+</resources>
