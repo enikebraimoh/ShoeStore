@@ -42,6 +42,7 @@ class ShoeListFragment : Fragment() {
 
         viewModel.shoe.observe(viewLifecycleOwner, Observer<List<Shoe>> {
             if (it.isNotEmpty()) {
+
                 it.forEach { shoe ->
                     val textView = TextView(this.context)
                     val content = " Shoe Name :${shoe.name}" +
