@@ -28,7 +28,6 @@ class ShoeListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_list, container, false)
-       // viewModel = ViewModelProvider(requireActivity()).get(ShoeListModel::class.java)
         setHasOptionsMenu(true)
         return binding.root
     }
@@ -40,9 +39,8 @@ class ShoeListFragment : Fragment() {
             view.findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailsFragment())
         }
 
-        viewModel.shoe.observe(viewLifecycleOwner, Observer<List<Shoe>> {
+        viewModel.shoe.observe(viewLifecycleOwner, Observer{
             if (it.isNotEmpty()) {
-
                 it.forEach { shoe ->
                     val textView = TextView(this.context)
                     val content = " Shoe Name :${shoe.name}" +

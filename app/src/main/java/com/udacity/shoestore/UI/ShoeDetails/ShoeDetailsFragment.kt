@@ -36,15 +36,15 @@ class ShoeDetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val shoe = Shoe(binding.shoeNameEditText.text.toString(),
-            binding.shoeSizeEditText.text.toString(),
-            binding.companyNameEditText.text.toString(),
-            binding.shoeDescriptionEditText.text.toString())
 
         //viewModelFactory = ViewModelFactory(shoe)
         //viewModel = ViewModelProvider(requireActivity()).get(ShoeListModel::class.java)
 
         binding.SaveButton.setOnClickListener { view ->
+            val shoe = Shoe(binding.shoeNameEditText.text.toString(),
+                binding.shoeSizeEditText.text.toString(),
+                binding.companyNameEditText.text.toString(),
+                binding.shoeDescriptionEditText.text.toString())
             viewModel.addShoe(shoe)
             view.findNavController().navigate(ShoeDetailsFragmentDirections.actionShoeDetailsFragmentToShoeListFragment())
 
