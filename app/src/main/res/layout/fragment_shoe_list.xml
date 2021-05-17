@@ -24,11 +24,8 @@
             <LinearLayout
                 android:id="@+id/linlayout"
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
             </LinearLayout>
 
         </ScrollView>

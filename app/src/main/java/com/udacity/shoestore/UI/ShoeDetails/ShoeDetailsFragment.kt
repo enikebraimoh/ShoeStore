@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
@@ -18,8 +19,7 @@ import com.udacity.shoestore.models.Shoe
 class ShoeDetailsFragment : Fragment() {
 
     private lateinit var binding :FragmentShoeDetailsBinding
-    private lateinit var viewModel : ShoeListModel
-    private lateinit var viewModelFactory : ViewModelFactory
+    private val viewModel: ShoeListModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,9 +41,8 @@ class ShoeDetailsFragment : Fragment() {
             binding.companyNameEditText.text.toString(),
             binding.shoeDescriptionEditText.text.toString())
 
-
         //viewModelFactory = ViewModelFactory(shoe)
-        viewModel = ViewModelProvider(requireActivity()).get(ShoeListModel::class.java)
+        //viewModel = ViewModelProvider(requireActivity()).get(ShoeListModel::class.java)
 
         binding.SaveButton.setOnClickListener { view ->
             viewModel.addShoe(shoe)
